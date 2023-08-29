@@ -4,7 +4,7 @@ package Interpreter;
 
 public class SorprendidoTerminalExpression implements ExpresionAbstract {
     @Override
-    public String interpret(Context context) {
+    public String interpret(Context context) { //En este método verificamos si la cadena de entrada contiene el emoticono ":)". Si es así, devuelve la cadena "sorprendido 😲", de lo contrario, devuelve una cadena vacía.
         String emoticon  = context.getInput();
         if (emoticon .contains(":O")) {  // Verificamos si el emoticono :O está en la entrada.
             return "sorprendido 😲";

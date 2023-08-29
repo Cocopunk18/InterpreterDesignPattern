@@ -11,23 +11,23 @@ import java.util.List;
 import java.util.Scanner;
 public class Client {
     public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);// Creamos un Scanner para leer la entrada del usuario.
+        Scanner scanner = new Scanner(System.in);// Creamos un Scanner para leer la entrada del usuario por consola.
         System.out.println("Ingrese una frase con emoticonos como \":)\" \":(\" \":O\" (o escriba \"cerrar\" para salir):");
 
-        List<ExpresionAbstract> expressions = new ArrayList<>();
+        List<ExpresionAbstract> expressions = new ArrayList<>(); // Se crea una lista de expresiones que incluye las expresiones para los diferentes emoticonos.
         expressions.add(new FelizTerminalExpression());
         expressions.add(new TristeTerminalExpression());
         expressions.add(new SorprendidoTerminalExpression());
-        ExpresionAbstract fraseExpression = new FraseNonTerminalExpression(expressions);
+        ExpresionAbstract fraseExpression = new FraseNonTerminalExpression(expressions); //Crea una instancia de FraseNonTerminalExpression que agrupa todas las expresiones.
 
         while (true) {
-            String input = scanner.nextLine();
-            if (input.equalsIgnoreCase("cerrar")) {
+            String emoticon = scanner.nextLine(); // se solicita la usuario ingresar la expresión y se almacena en la variable
+            if (emoticon.equalsIgnoreCase("cerrar")) { //Se verifica si la entrada ingresada es "cerrar" (sin importar si está escrita en mayúsculas o minúsculas).
                 break;
             }
-            Context context = new Context(input);
-            String translation = fraseExpression.interpret(context);
-            System.out.println("Traducción: " + translation);
+            Context context = new Context(emoticon); //crea un objeto Context llamado context que contiene la expresión ingresada. Esto se hace para proporcionar el contexto necesario para la interpretación de las expresiones.
+            String translation = fraseExpression.interpret(context); //Se llama al método interpret en la expresión no terminal compuesta (fraseExpression) pasándole el objeto context. Esto interpreta la expresión ingresada y produce una traducción resultante, que se almacena en la variable translation.
+            System.out.println("Traducción: " + translation); //Se muestra la traducción resultante en la consola.
             System.out.println("Ingrese otra frase o escriba \"cerrar\" para salir:");
         }
 

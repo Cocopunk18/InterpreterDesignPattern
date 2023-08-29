@@ -4,9 +4,9 @@ package Interpreter;
 
 public class FelizTerminalExpression implements ExpresionAbstract {
     @Override
-    public String interpret(Context context) {
+    public String interpret(Context context) { // En este método verificamos si la cadena de entrada contiene el emoticono ":)". Si es así, devuelve la cadena "feliz 😄", de lo contrario, devuelve una cadena vacía.
         String emoticon = context.getInput();
-        if (emoticon .contains(":)")) {  // Verificamos si el emoticono :) está en la entrada.
+        if (emoticon .contains(":)")) { 
             return "feliz 😄";
         }
         return "";

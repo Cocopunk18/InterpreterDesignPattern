@@ -2,5 +2,5 @@
 package Interpreter;
 
 public interface ExpresionAbstract {
-    String interpret(Context context);
+    String interpret(Context context); //Método que toma un objeto Context y devuelve una cadena que representa la interpretación de esa expresión.
 }
