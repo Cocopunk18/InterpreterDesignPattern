@@ -4,12 +4,12 @@
 package Interpreter;
 
 public class Context {
-    private String input;
+    private String emoticon;
 
-    public Context(String input) {
-        this.input = input;
+    public Context(String emoticon) {
+        this.emoticon = emoticon;
     }
     public String getInput() {
-        return input;
+        return emoticon;
     }
 }

@@ -5,8 +5,8 @@ package Interpreter;
 public class SorprendidoTerminalExpression implements ExpresionAbstract {
     @Override
     public String interpret(Context context) {
-        String input = context.getInput();
-        if (input.contains(":O")) {  // Verificamos si el emoticono :O está en la entrada.
+        String emoticon  = context.getInput();
+        if (emoticon .contains(":O")) {  // Verificamos si el emoticono :O está en la entrada.
             return "sorprendido 😲";
         }
         return "";
