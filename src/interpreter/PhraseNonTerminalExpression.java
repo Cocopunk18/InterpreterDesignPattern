@@ -1,16 +1,14 @@
-// Define una clase FraseExpression que implementa la interfaz ExpressionAbstract.
+// Clase FraseExpression que implementa la interfaz ExpressionAbstract.
 //Tiene un campo expressions que es una lista de expresiones.
 //El constructor recibe una lista de expresiones y la asigna al campo expressions.
 //En el método interpret, recorre todas las expresiones en la lista, llama a su método interpret y concatena los resultados en un StringBuilder para construir la traducción final.
-package Interpreter;
-import java.util.ArrayList;
+package interpreter;
 import java.util.List;
-import java.util.Scanner;
 
-public class FraseNonTerminalExpression implements ExpresionAbstract {
+public class PhraseNonTerminalExpression implements ExpresionAbstract {
     private List<ExpresionAbstract> expressions;//lista de objetos que implementan la interfaz ExpresionAbstract, es decir, Una lista es una estructura de datos que puede contener múltiples elementos en un orden determinado. En este caso, la lista contendrá objetos que son expresiones.
 
-    public FraseNonTerminalExpression(List<ExpresionAbstract> expressions) {
+    public PhraseNonTerminalExpression(List<ExpresionAbstract> expressions) {
         this.expressions = expressions;
     }
 

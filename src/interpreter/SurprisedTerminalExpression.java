@@ -1,8 +1,8 @@
-// Define una clase SorprendidoExpression que implementa la interfaz ExpressionAbstrac.
+// Clase SorprendidoExpression que implementa la interfaz ExpressionAbstrac.
 //Sobrescribe el método interpret para verificar si el texto de entrada contiene :) y, en ese caso, devuelve "Sorprendido". Si no, devuelve una cadena vacía.
-package Interpreter;
+package interpreter;
 
-public class SorprendidoTerminalExpression implements ExpresionAbstract {
+public class SurprisedTerminalExpression implements ExpresionAbstract {
     @Override
     public String interpret(Context context) { //En este método verificamos si la cadena de entrada contiene el emoticono ":)". Si es así, devuelve la cadena "sorprendido 😲", de lo contrario, devuelve una cadena vacía.
         String emoticon  = context.getInput();

@@ -1,7 +1,7 @@
-// Define una clase Context que almacena el contexto de interpretación (el texto de entrada).
+// La clase Context almacena el contexto de interpretación (el texto de entrada).
 //Tiene un constructor que toma la entrada y la almacena en el campo emoticon.
 //Tiene un método getInput que devuelve la entrada almacenada.
-package Interpreter;
+package interpreter;
 
 public class Context {
     private String emoticon;
